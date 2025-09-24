@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deje Mi Sesión Abierta - Proyecto Escolar 525</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔐 Deje Mi Sesión Abierta</h1>
+            <p class="subtitle">Proyecto Escolar - Clase 525</p>
+        </header>
+
+        <main>
+            <div class="session-info">
+                <h2>Información de la Sesión</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Estado de la Sesión:</label>
+                        <span id="session-status" class="status inactive">Inactiva</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Tiempo Activo:</label>
+                        <span id="session-time">00:00:00</span>
+                    </div>
+                    <div class="info-item">
+                        <label>ID de Sesión:</label>
+                        <span id="session-id">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Última Actividad:</label>
+                        <span id="last-activity">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <h2>Control de Sesión</h2>
+                <div class="button-group">
+                    <button id="start-session" class="btn btn-primary">Iniciar Sesión</button>
+                    <button id="keep-alive" class="btn btn-secondary" disabled>Mantener Viva</button>
+                    <button id="end-session" class="btn btn-danger" disabled>Cerrar Sesión</button>
+                </div>
+            </div>
+
+            <div class="settings">
+                <h2>Configuración</h2>
+                <div class="setting-item">
+                    <label for="timeout-setting">Tiempo de expiración (minutos):</label>
+                    <input type="number" id="timeout-setting" value="30" min="1" max="120">
+                </div>
+                <div class="setting-item">
+                    <label for="auto-keepalive">
+                        <input type="checkbox" id="auto-keepalive">
+                        Mantener sesión automáticamente
+                    </label>
+                </div>
+            </div>
+
+            <div class="activity-log">
+                <h2>Registro de Actividad</h2>
+                <div id="log-container" class="log-container">
+                    <p class="log-entry">Sistema iniciado</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 - Proyecto Escolar de Gestión de Sesiones</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
